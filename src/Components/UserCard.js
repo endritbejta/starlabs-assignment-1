@@ -1,11 +1,13 @@
 import React from "react";
 import "./UserCard.scss";
+import { NavLink } from "react-router-dom";
 
-const UserCard = ({ user, onClick, active }) => {
+const UserCard = ({ to, user }) => {
   return (
-    <div onClick={onClick} className={`UserCard ${active ? "active" : ""}`}>
-      {user}
-    </div>
+    <NavLink to={`${to}`} className="UserCard">
+      <p>{user}</p>
+      <i className="fa-solid fa-caret-down"></i>
+    </NavLink>
   );
 };
 

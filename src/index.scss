@@ -33,3 +33,10 @@ code {
 ::-webkit-scrollbar-corner {
   background: #f5f5f5;
 }
+
+:root {
+  --color-orange: rgb(224, 67, 10);
+  --shadow-primary: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  --color-green: rgb(98, 184, 98);
+  --color-todo: rgb(211, 143, 54);
+}

@@ -1,0 +1,16 @@
+.todos-page {
+  justify-self: stretch;
+  height: calc(100% - 34px);
+  width: 100%;
+  ul {
+    padding: 2px;
+    padding-top: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    overflow-y: scroll;
+    border-top: 1px solid #aaa;
+  }
+}
