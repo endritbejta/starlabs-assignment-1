@@ -33,7 +33,7 @@ const Todo = () => {
       <select id="selectCompleted" className="select" onChange={handleFIlter}>
         <option value="">All</option>
         <option value="completed">Completed</option>
-        <option value="ongoing">On going</option>
+        <option value="ongoing">Ongoing</option>
       </select>
       <ul>{todos}</ul>
     </div>

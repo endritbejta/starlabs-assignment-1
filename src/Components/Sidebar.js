@@ -4,16 +4,18 @@ import UserCard from "./UserCard";
 import { Outlet, useParams } from "react-router-dom";
 const Sidebar = ({ usersData }) => {
   const params = useParams();
+
   let usersArray = usersData?.map((user) => {
     return <UserCard key={user.id} user={user.name} to={user.id} />;
   });
 
   let outlet = !params.id ? (
-    <p className="Main">Please select a user...</p>
+    <p style={{ textAlign: "center" }} className="Main">
+      Please select a user...
+    </p>
   ) : (
     <Outlet />
   );
-  console.log("running");
 
   return (
     <>

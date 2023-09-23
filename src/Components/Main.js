@@ -4,8 +4,6 @@ import { NavLink } from "react-router-dom";
 import { Outlet } from "react-router";
 
 const Main = () => {
-  console.log("running");
-
   return (
     <div className="Main">
       <nav className="navigation">

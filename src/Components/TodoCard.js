@@ -7,6 +7,7 @@ const TodoCard = ({ title, check }) => {
   ) : (
     <i className="fa-solid fa-clock-rotate-left"></i>
   );
+
   return (
     <div className={`todo-card ${check ? "done" : "todo"}`}>
       <p>{title}</p>
