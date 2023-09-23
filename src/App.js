@@ -5,7 +5,7 @@ import Sidebar from "./Components/Sidebar";
 
 function App() {
   const data = useLoaderData();
-
+  console.log("running");
   return (
     <div className="App">
       <div className="shade">

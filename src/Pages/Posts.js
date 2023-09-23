@@ -6,6 +6,7 @@ import PostCard from "../Components/PostCard";
 const Posts = () => {
   const data = useLoaderData();
   const params = useParams();
+  console.log(params);
   const selectedUserPosts = data.filter((post) => post.userId === +params.id);
   const posts = selectedUserPosts.map((post) => (
     <PostCard title={post.title} key={post.id} description={post.body} />

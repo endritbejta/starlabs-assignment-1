@@ -13,6 +13,8 @@ const Sidebar = ({ usersData }) => {
   ) : (
     <Outlet />
   );
+  console.log("running");
+
   return (
     <>
       <div className="Sidebar">
