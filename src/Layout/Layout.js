@@ -6,6 +6,7 @@ import Todo from "../Pages/Todo";
 import Posts from "../Pages/Posts";
 import axios from "axios";
 import Main from "../Components/Main";
+import Error from "../Pages/Error";
 
 const usersApiUrl = "https://jsonplaceholder.typicode.com/users";
 const todosApiUrl = "https://jsonplaceholder.typicode.com/todos";
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
   {
     path: "",
     element: <App />,
+    errorElement: <Error />,
     loader: async () => {
       const response = await axios.get(usersApiUrl);
       return response.data;
@@ -23,7 +25,7 @@ const router = createBrowserRouter([
       {
         path: ":id",
         element: <Main />,
-
+        errorElement: <Error />,
         children: [
           {
             path: "todos",
