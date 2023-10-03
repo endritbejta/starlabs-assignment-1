@@ -1,0 +1,9 @@
+.posts-page {
+  width: 100%;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: scroll;
+  list-style-type: none;
+}

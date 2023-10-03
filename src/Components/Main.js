@@ -1,39 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Main.scss";
-import PostCard from "./PostCard";
-import axios from "axios";
+import { NavLink } from "react-router-dom";
+import { Outlet } from "react-router";
 
-const userPostsUrl = "https://jsonplaceholder.typicode.com/posts";
-
-const Main = ({ id }) => {
-  const [userPosts, setUserPosts] = useState();
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const response = await axios.get(userPostsUrl);
-        const allPosts = response.data;
-        const userPosts = allPosts.filter((post) => post.userId === id);
-        setUserPosts(userPosts);
-        setIsLoading(false);
-      } catch (err) {
-        console.log("error: ", err);
-      }
-    };
-    fetchPosts();
-  }, [id]);
-
-  const posts = userPosts?.map((post) => (
-    <PostCard key={post.id} title={post.title} description={post.body} />
-  ));
-
+const Main = () => {
   return (
     <div className="Main">
-      <p className="page-title">Posts</p>
-      <ul>
-        {isLoading ? <p style={{ textAlign: "center" }}>Loading...</p> : posts}
-      </ul>
+      <nav className="navigation">
+        <ul>
+          <li>
+            <NavLink to="" end>
+              Posts
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="todos">Todos</NavLink>
+          </li>
+        </ul>
+      </nav>
+      <Outlet />
     </div>
   );
 };

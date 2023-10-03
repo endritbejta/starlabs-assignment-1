@@ -1,0 +1,29 @@
+.todos-page {
+  justify-self: stretch;
+  height: calc(100% - 45px);
+  width: 100%;
+  position: relative;
+  .select {
+    padding: 5px 10px;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    outline: none;
+    margin-bottom: 10px;
+    border: none;
+    display: block;
+    margin-left: auto;
+    cursor: pointer;
+    box-shadow: var(--shadow-primary);
+  }
+  ul {
+    padding: 2px;
+    padding-top: 8px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    overflow-y: scroll;
+  }
+}

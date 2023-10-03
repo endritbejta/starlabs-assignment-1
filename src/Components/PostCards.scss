@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 6px;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px,
-    inset -1px 14px 0px -10px rgb(224, 67, 10);
+  box-shadow: var(--shadow-primary), inset -1px 14px 0px -11px rgb(224, 67, 10);
   border-radius: 5px;
   padding: 8px;
   margin-right: 5px;
